@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-image: url('bg.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+           
+            margin: 0;
+            padding: 0;
+
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+        
+.custom-container {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f0f0f;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+    font-family: 'Pacifico', cursive;
+    font-size: 32px;
+    color: #ff0000;
+    
+}
+span{
+  font-family: 'Pacifico', cursive;
+  font-size: 32px;
+  color: #00ffff;
+}
+  .span1{
+    font-size: 22px;
+  color: #03ff0f;
+  }
+.pText {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #000000;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #333333;
+}
+p:hover {
+      background-color: #00ff00;
+      margin:0px;
+      padding:20px;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(5, 9, 0, 03.3);
+      background: linear-gradient(to right, red, green, blue, indigo, violet);
+    /* এখানে রংগুলি একে একে পাশে পাশে দেখানো হচ্ছে */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* টেক্সটের রঙগুলি ব্যবহার করা হচ্ছে */
+    font-size: 24px;
+    font-weight: bold;
+    }
+.custom-box {
+    font-family: 'Lobster', cursive;
+    font-size: 20px;
+    color: #0000ff;
+}
+
+.font-bold {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    color: #008000;
+    font-weight: bold;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.image-container img {
+    width: 120px;
+    height: 120px;
+    padding: 5px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    display: block;
+  margin: 0px auto;
+ 
+}
+.image-container::before,
+.image-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #000;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.image-container::before {
+  left: 0;
+}
+
+.image-container::after {
+  right: 0;
+}
+
+.image-container:hover::before,
+.image-container:hover::after {
+  opacity: 1;
+}
+
+@keyframes border-animation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.image-container:hover::before,
+.image-container:hover::after {
+  animation: border-animation 1.5s infinite;
+}
+
+
+/* Stylish Copyright Text */
+.createby {
+  margin-top: 20px;
+  font-size: 14px;
+  display:flex;
+  justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            
+}
+
+.createby p {
+  margin: 5px 0;
+  color: #black; /* Change to desired color */
+}
+
+</style>
+
+
+</head>
+<body>
+    <div class="custom-container">
+        <h1 style="font-family: 'Pacifico', cursive; font-size: 32px; color: #ff0000;">About Me</h1>
+        <p class="pText" style="font-family: 'Roboto', sans-serif; font-size: 18px; color: #000000;">Hello! I'm  <span> Shawon Khondoker</span> , a passionate web developer dedicated to creating exceptional online experiences. With a strong background in web development, I strive to deliver high-quality and visually appealing websites that engage users.</p>
+
+        <p style="font-family: 'Montserrat', sans-serif; font-size: 16px; color: #333333;">Throughout my journey in the field of web development, I have gained expertise in  <span class="span1"> HTML, CSS, JavaScript,  </span> and various web frameworks. I enjoy translating design concepts into functional and responsive web interfaces. I am constantly exploring new technologies and industry trends to enhance my skills and deliver innovative solutions.</p>
+
+        <p style="font-family: 'Open Sans', sans-serif; font-size: 14px; color: #666666;">I believe in the power of collaboration and effective communication. I am experienced in working with cross-functional teams, understanding client requirements, and delivering projects on time. I am adept at problem-solving and thrive in challenging situations that require creative thinking and attention to detail.</p>
+
+        <p class="custom-box font-italic" style="font-family: 'Lobster', cursive; font-size: 20px; color: #0000ff;">My passion for web development extends beyond the technical aspects. I am committed to creating user-centric experiences that leave a lasting impact. I prioritize usability, accessibility, and performance in my work to ensure that websites are not only visually appealing but also functional and user-friendly.</p>
+
+        <p class="font-bold" style="font-family: 'Raleway', sans-serif; font-size: 16px; color: #008000;">If you have any inquiries or would like to discuss a potential project, please feel free to get in touch with me. I am excited to collaborate with you and bring your ideas to life through innovative web solutions.</p>
+         
+<div class="image-container">
+  <img src="abu.jpg" alt="Image 1">
+  <img src="ab.jpeg" alt="Image 2">
+</div>
+</div>
+        <div class="">
+        <div class="createby">
+          <p>&copy; Shawon khondoker, 2024.</p>
+          <p>All rights reserved.</p>
+        </div>
+                </div>
+</body>
+</html>
+

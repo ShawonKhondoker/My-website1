@@ -1,0 +1,2156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolioo</title>
+    <link rel="icon" type="image/x-icon" href="/assets/fav-icon.jpg" />
+    <link rel="stylesheet" href="style/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Montserrat:500");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+}
+/* Common Styling */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #ecf0f1;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Header Styling */
+header {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  animation: fadeInUp 1s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo a {
+  text-decoration: none;
+  color: #3498db;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Navigation Links Styling */
+.nav_links {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav_links li:nth-child(1) a {
+  color: #e74c3c; /* Red */
+}
+
+.nav_links li:nth-child(2) a {
+  color: #3498db; /* Blue */
+}
+
+.nav_links li:nth-child(3) a {
+  color: #27ae60; /* Green */
+}
+
+.nav_links li:nth-child(4) a {
+  color: #f39c12; /* Yellow */
+}
+
+.nav_links li {
+  margin-bottom: 10px;
+  animation: slideInRight 1s ease;
+}
+
+.nav_links a {
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav_links a:hover {
+  transform: scale(1.1);
+}
+
+/* WhatsApp Button Styling */
+.fa-whatsapp {
+  margin-right: 5px;
+}
+
+.nav_btn {
+  text-decoration: none;
+}
+
+.nav_btn button {
+  background-color: #2ecc71;
+  color: #fff;
+  padding: 10px 15px;
+  border: 2px solid #27ae60;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.nav_btn button:hover {
+  background-color: #218c74;
+  transform: scale(1.1);
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (min-width: 768px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav_links {
+    display: flex;
+  }
+
+  .nav_links li {
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
+}
+
+.about {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #0284c7;
+}
+
+.about_btn button {
+  background-color: #0284c7;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.about_btn button:hover {
+  background-color: #00c2ff;
+}
+
+
+
+ .image-slider {
+      width: 100%;
+      height: auto; /* Adjust the maximum width as needed */
+      margin: auto;
+        background-image: url('bg@.jpg'); /* Replace 'your-image-url.jpg' with the actual URL or path to your image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            
+            
+            
+            align-items: center;
+            justify-content: center;
+            color: #ffffff; /* Change text color to be visible on the background */
+        
+  
+    
+    }
+
+    .image-slider__viewport {
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      height: auto;
+    }
+
+    .image-slider__container {
+      display: flex;
+      align-items: center;
+      height: auto;
+      transition: transform 0.4s ease-in-out;
+    }
+
+    .image-slider__container img {
+      width: 100%;
+      height: auto;
+      height: 100%; /* Set a maximum height if needed */
+      
+      border-radius: 5px;
+    }
+
+    .image-slider__navigation {
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .image-slider__navigation button {
+      background: none;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+
+    .image-slider__navigation--prev,
+    .image-slider__navigation--next {
+      width: 100%; /* Adjust button width */
+      height: 100%; /* Adjust button height */
+    }
+
+
+
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
+}
+
+section#about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 20px;
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.about {
+  max-width: 50%;
+  text-align: left;
+}
+
+.about h3 {
+  font-size: 1.0rem;
+  color: #0L1380;
+}
+
+.about h1 {
+  font-size: 1.5rem;
+  
+}
+
+.about p {
+  font-size: 1rem;
+  color: #1199;
+  margin: 20px 0;
+}
+
+.about_btn {
+  text-decoration: none;
+  color: #fff;
+  transition: background-color 0.3s;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.about_btn button {
+  background-color: #1c7ed6;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+.about_btn button i {
+  margin-right: 5px;
+}
+
+.about-icons {
+  display :flex;
+  justify-content:center;
+  align-items:center;
+  margin-top: 20px;
+  
+  display: flex;
+  gap: 20px;
+}
+
+.about-icons a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.about-icons a:hover {
+  color: #1c7ed6;
+}
+
+
+.fa-linkedin-square {
+  color: #0077b5; /* LinkedIn Blue */
+}
+
+.fa-github {
+  color: #24292e; /* GitHub Black */
+}
+
+.fa-facebook-square {
+  color: #1877f2; /* Facebook Blue */
+}
+
+.fa-instagram {
+  color: #bc2a8d; /* Instagram Pink */
+}
+
+.img_about {
+  max-width: 60%;
+  padding:10px;
+  margin:5px;
+  text-align: right;
+}
+
+.img_about img {
+  max-width: 100%;
+  border-radius: 20px;
+  transition: transform 0.3s;
+}
+
+.img_about img:hover {
+  transform: scale(1.1);
+}
+
+
+
+@media (max-width: 768px) {
+  section#about {
+    flex-direction: column;
+  }
+
+  .about, .img_about {
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .img_about img {
+    border-radius: 10px;
+  }
+}
+
+/* Animations */
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.about {
+  animation: fadeInRight 0.8s ease-out;
+}
+
+/* img slider Section Styles */
+
+  .body1 {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to right, #ffcc66, #ff6666);
+      color: #fff;
+      text-align: center;
+      width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+  
+  
+  background-image: url('bg@.jpg'); /* Replace 'your-image-url.jpg' with the actual URL or path to your image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            
+            
+            
+            align-items: center;
+            justify-content: center;
+            color: #ffffff; /* Change text color to be visible on the background */
+        
+  
+    }
+
+#imageElement {
+  width: 97%;
+  max-height: 250px;
+  border: 5px solid #fff;
+  border-radius: 10px;
+  margin-right: 0px;
+  transition: border 0.3s ease-in-out, transform 0.5s ease-in-out, filter 0.5s ease-in-out;
+  
+}
+
+#imageElement:hover {
+  border: 5px solid #ff6666;
+  transform: scale(1.1);
+  filter: brightness(90%) contrast(120%);
+}
+
+h1 {
+  font-size: 32px;
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  color: #ff6666;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  padding: 5px;
+}
+
+
+#imageContainer {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+}
+
+#imageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 99%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#imageContainer:hover #imageOverlay {
+  opacity: 1;
+}
+
+
+/* Education Section Styles */
+.education {
+  overflow: hidden;
+}
+
+/* Left-side Div Styles */
+.edu-left {
+  float: left;
+  width: 50%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #f1f1f1;
+}
+
+.edu-left h1 {
+  color: #3498db;
+  font-size: 2em;
+}
+
+.edu-left span {
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #e74c3c;
+  margin: 10px auto;
+}
+
+.edu-left p {
+  color: #2ecc71;
+  font-style: italic;
+}
+
+.edu-left h2,
+.edu-left .date-edu {
+  font-size: 1.5em;
+  color: #9b59b6;
+  margin-bottom: 5px;
+}
+
+/* Right-side Div Styles */
+.edu-right {
+  float: right;
+  width: 50%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #ecf0f1;
+}
+
+.edu-right h1 {
+  color: #e74c3c;
+  font-size: 2em;
+}
+
+.edu-right span {
+  display: block;
+  width: 100px;
+  height: 100px;
+  background: #3498db;
+  margin: 10px auto;
+}
+
+.edu-right p {
+  color: #e67e22;
+  font-style: italic;
+}
+
+.edu-right h2,
+.edu-right .date-edu {
+  font-size: 1.5em;
+  color: #27ae60;
+  margin-bottom: 5px;
+}
+
+/* Education Section */
+#education {
+  margin: 30px 0;
+}
+
+.education {
+  text-align: center;
+}
+
+.edu-title {
+  margin-bottom: 30px;
+}
+
+.edu-title h1 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  font-family: 'Arial', sans-serif;
+  color: #2c3e50; /* Dark Blue */
+}
+
+.edu-title span {
+  display: block;
+  width: 50px;
+  margin: 0 auto;
+  border-top: 2px solid #3498db; /* Blue */
+}
+
+.edu-title p {
+  font-style: italic;
+  font-size: 16px;
+  color: #888;
+}
+
+.row {
+  display: flex;
+  margin: 0 10px;
+  padding:0 15px;
+  justify-content:center;
+  justify-content: space-between;
+}
+
+.col1, .col3 {
+  flex: 1;
+  padding: 50px;
+  margin:5px;
+  width:100%;
+  height:100%;
+  background-color: #ecf0f1; /* Light Gray */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.col2 {
+  flex: 2;
+  
+}
+
+h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  font-family: 'Roboto', sans-serif;
+  color: #3498db; /* Blue */
+  font-style: italic;
+  
+}
+
+.date-edu {
+  font-weight: bold;
+  font-size: 16px;
+ 
+  color: #555;
+  justify-content:center;
+  
+}
+
+.desc-edu {
+  font-size: 16px;
+  margin:10px;
+  color: #777;
+  
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+/* Hover effect on columns */
+.col1:hover, .col3:hover {
+  transform: scale(1.05);
+}
+
+
+
+        .product-card {
+            max-width: 400px;
+            margin: 20px;
+            background-color: #fff;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+
+        img:hover {
+            transform: scale(1.1);
+            opacity: 0.8;
+        }
+
+        .h22 {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #e44d26;
+            font-style:initial;
+            font-variant: small-caps;
+            
+            
+        }
+
+        p {
+            color: #666;
+            font-size: 1em;
+            margin-bottom: 10px;
+            font-style: unset;
+            
+        }
+
+        .price {
+            font-weight: bold;
+            color: #4d26;
+            font-size: 1.2em;
+            font-style: oblique;
+            
+        }
+        .bt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+        button {
+          
+            background-color: #e44d26;
+            color: #fff;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #333;
+        }
+
+        /* Responsive styling */
+        @media (max-width: 600px) {
+            .product-card {
+                max-width: 100%;
+            }
+               img {
+                max-width: 400%;
+            }
+        }
+
+        /* Updated Responsive Styling */
+        @media (min-width: 601px) {
+            .bodys {
+                display: flex;
+                justify-content: space-around;
+            }
+
+            .product-card {
+                flex: 0 0 48%;
+            }
+              img {
+                max-width: 500%;
+            }
+        }
+
+/* Sms Section */
+.sms-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #007BFF;
+    font-size: 18px;
+    background-color: #f0f0f0;
+    padding: 10px;
+    text-shadow: 1px 1px 2px #000;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .chat-container {
+    width: 100%; /* Adjust as needed */
+    display: flex;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    
+    
+        background-image: url('sms.jpeg'); /* Replace 'your-image-url.jpg' with the actual URL of your image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  }
+
+  .message-list {
+    flex: 1; /* Adjust as needed */
+    padding: 16px;
+    max-height: 300px;
+    overflow-y: auto;
+    border-right: 1px solid #ddd;
+  }
+
+  .input-container1 {
+    flex: 1; /* Adjust as needed */
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    
+    margin-left: 10px; /* Added margin for separation */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* Added box shadow */
+  }
+
+  input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Added input shadow */
+  }
+.container1 {
+  margin:20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 10px; /* Adjust as needed */
+}
+
+input {
+  /* Your input styles go here */
+}
+
+.button1 {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+  width:50%;
+  margin-top:0px;
+  
+  padding:20px;
+  /* Adjust as needed */
+  
+  
+  
+}
+
+.button1:hover {
+  background-color: #0056b3;
+}
+
+/* Example Animation */
+@keyframes slideIn {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animated-element {
+  animation: slideIn 0.5s ease-out;
+}
+
+
+/* Skills Section */
+#skill {
+  background-color: #f4f4f4;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.skill {
+  text-align: center;
+}
+
+.skill-title {
+  margin-bottom: 30px;
+}
+
+
+
+.skill-title h1 {
+  font-size: 36px;
+  color: #3498db;
+}
+
+.skill-title span {
+  display: block;
+  width: 100px;
+  height: 2px;
+  background-color: #3498db;
+  margin: 20px auto;
+}
+
+.skill-title p {
+  font-style: italic;
+  font-size: 18px;
+  color: #777;
+}
+
+
+
+   /* Default styles for all a tags */
+    .a1 {
+      text-decoration: underline wavy;
+      color: #007BFF;
+      
+      font-weight: bold;
+      padding: 5px; /* Add padding around the link */
+      border-radius: 4px; /* Add rounded corners */
+      background-color: #f0f0f0; /* Add background color */
+      transition: color 0.3s ease, background-color 0.3s ease; /* Add smooth transition effects */
+    }
+
+    /* Hover styles for a tags */
+    .a1:hover {
+      color: #0056b3; /* Change color on hover */
+      text-decoration: underline; /* Add underline on hover */
+      background-color: #ddd; /* Change background color on hover */
+    }
+
+    /* Apply styles for visited links */
+    .a1:visited {
+      color: #4c2c92; /* Change color for visited links */
+    }
+
+    /* Apply styles for active links (clicked) */
+    .a1:active {
+      color: #ff4500; /* Change color for active links */
+    }
+    
+    
+.flex-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.items {
+  width: 30%;
+  margin: 15px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.items:hover {
+  transform: scale(1.05);
+}
+
+.items img {
+  width: 80px;
+  margin-bottom: 15px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Individual Paragraph Styling */
+.items p:nth-child(1) {
+  font-size: 20px;
+  font-weight: bold;
+  color: #3498db; /* Blue */
+}
+
+.items p:nth-child(2) {
+  font-size: 18px;
+  color: #e74c3c; /* Red */
+  text-decoration: underline;
+}
+
+.items p:nth-child(3) {
+  font-size: 22px;
+  color: #27ae60; /* Green */
+  font-style: normal;
+}
+
+.items p:nth-child(4) {
+  font-size: 16px;
+  color: #f39c12; /* Yellow */
+  font-weight: normal;
+}
+
+.items p:nth-child(5) {
+  font-size: 24px;
+  color: #9b59b6; /* Purple */
+  text-transform: uppercase;
+}
+
+.items p:nth-child(6) {
+  font-size: 18px;
+  color: #2ecc71; /* Light Green */
+  letter-spacing: 2px;
+}
+
+/* Animation Keyframes */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Styles for the Skills Section */
+#skill {
+  background-color: #f4f4f4;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.skill-title h1 {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.skill-title span {
+  display: block;
+  width: 60px;
+  height: 2px;
+  
+  background-color: #3498db;
+  margin: 50px auto;
+}
+
+.flex-wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  
+}
+
+.items {
+  width: 400px;
+  margin: 10px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.items:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.items img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+.imgsk {
+  width: 100px; /* Adjust the width as needed */
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Hover effect on the image */
+.imgsk:hover {
+  transform: rotate(360deg);
+}
+.items p {
+  font-size: 1.2em;
+  margin: 8px 0;
+}
+
+/* Customize styling for skill levels */
+
+
+.basic {
+  color: #e74c3c;
+}
+
+
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Contact Section */
+#contact {
+  
+  background-image: url('bgs.jpeg'); /* Replace 'your-image-url.jpg' with the actual path or URL of your image */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+       /* Adjust the height as needed */
+      margin: 0;
+      
+      align-items: center;
+      justify-content: center;
+      font-family: 'Arial', sans-serif; /* Change the font family as desired */
+      color: #ffffff; /* Text color */
+      text-align: center;
+      border: 1px solid #dddddd; /* Border color */
+      
+}
+
+.contact-title {
+  text-align: center;
+}
+
+.contact-title h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.contact-title span {
+  display: block;
+  margin: 10px auto;
+  width: 50px;
+  border: 2px solid #333;
+}
+
+.contact-title p {
+  font-style: italic;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 0px;
+}
+
+.col {
+  flex: 1;
+  margin: 10px;
+}
+
+.left img {
+  width: 100%;
+  height: 100%;
+  margin-bottom:30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Common styles for the container */
+.container {
+  font-family: Arial, sans-serif;
+  width: 300px;
+  
+  margin-top:16px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* Styles for the Registration Form section */
+.registration-form {
+   /* Hide the registration form by default */
+}
+
+.registration-form.show {
+  display: block; /* Show the registration form when needed */
+}
+
+.registration-form h2 {
+  margin-top: 0;
+}
+
+.registration-form form {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Pacifico', cursive;
+    font-size: 32px;
+    color: #ff0000;
+    
+}
+
+.registration-form label {
+  margin-top: 10px;
+  
+  flex-direction: column;
+  font-family: 'Pacifico', cursive;
+    font-size: 22px;
+    color: #ff0000;
+}
+
+.registration-form input[type="text"],
+.registration-form input[type="email"],
+.registration-form input[type="tel"],
+.registration-form input[type="password"] {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+
+  .bottons {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .botn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: #fff;
+    border: 2px solid #007BFF;
+  }
+
+  .botn:hover {
+    background-color: #0056b3;
+    color: #fff;
+    border-color: #0056b3;
+    transform: scale(1.05);
+  }
+
+
+
+/* Additional styles for input animations */
+.registration-form input[type="text"],
+.registration-form input[type="email"],
+.registration-form input[type="tel"],
+.registration-form input[type="password"] {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: all 0.3s ease; /* Adding transition for smooth animation */
+  background-color: #f2f2f2; /* Default background color */
+  color: #333; /* Default text color */
+  outline: none; /* Remove outline on focus */
+}
+
+/* Animation when input field is focused */
+.registration-form input[type="text"]:focus,
+.registration-form input[type="email"]:focus,
+.registration-form input[type="tel"]:focus,
+.registration-form input[type="password"]:focus {
+  border-color: #008cba; /* Change border color when focused */
+  box-shadow: 0 0 5px #008cba; /* Add shadow effect when focused */
+  background-color: #e6f9ff; /* Change background color when focused */
+  color: #0073e6; /* Change text color when focused */
+  border-width: 3px; /* Change border width when focused */
+}
+
+/* Animation when input field is filled */
+.registration-form input[type="text"]:valid,
+.registration-form input[type="email"]:valid,
+.registration-form input[type="tel"]:valid,
+.registration-form input[type="password"]:valid {
+  border-color: #4CAF50; /* Change border color when filled */
+  background-color: #eaffea; /* Change background color when filled */
+  color: #009900; /* Change text color when filled */
+  border-width: 2px; /* Change border width when filled */
+}
+
+/* Placeholder color */
+.registration-form input::placeholder {
+  color: #999;
+}
+
+/* Error message */
+.error-message {
+  color: #f00;
+  font-size: 12px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+
+    /* Slide-in from the left */
+    .animate-left {
+        animation: slideInLeft 1s ease;
+    }
+    
+    /* Slide-in from the right */
+    .animate-right {
+        animation: slideInRight 1s ease;
+    }
+
+    /* Slide-in from the top */
+    .animate-up {
+        animation: slideInUp 1s ease;
+    }
+
+    /* Slide-in from the bottom */
+    .animate-down {
+        animation: slideInDown 1s ease;
+    }
+
+    /* Define the animations */
+    @keyframes slideInLeft {
+        from {
+            transform: translateX(-100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+    
+    @keyframes slideInRight {
+        from {
+            transform: translateX(100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes slideInUp {
+        from {
+            transform: translateY(-100%);
+        }
+        to {
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes slideInDown {
+        from {
+            transform: translateY(100%);
+        }
+        to {
+            transform: translateY(0);
+        }
+    }
+   
+    /*  botton Define the animation */
+@keyframes scaleUp {
+  from {
+    transform: scale(0); /* Start from a scale of 0 (small size) */
+  }
+  to {
+    transform: scale(1); /* End with a scale of 1 (original size) */
+  }
+}
+
+/* Apply the animation to elements with 'botn' class */
+.botn {
+  
+  animation: scaleUp 1s ease;
+}
+
+/* Media Queries for Responsiveness */
+@media only screen and (max-width: 768px) {
+  #contact {
+    padding:5px;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .col {
+    margin: 10px 0;
+    
+  }
+}
+
+
+/* Styling for the left column */
+.col.left {
+  margin: 20px;
+}
+
+/* Basic styling for the image inside the left column */
+.col.left img {
+  width: 60%;
+  height:100%;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover effect on the image */
+.col.left img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Stylish Footer Content */
+.foot-content {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  font-family: 'Roboto', sans-serif; /* Change to desired font */
+}
+
+.foot-content p {
+  margin: 8px 0;
+  font-size: 16px;
+  font-style: italic;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin: 0 10px;
+  color: #ffcc00; /* Change to desired color */
+  font-size: 24px;
+  text-decoration: none;
+}
+
+/* Stylish Scroll-up Button */
+#scrool-up {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  display: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#scrool-up:hover {
+  background-color: #0056b3;
+}
+
+/* Stylish Animation for Scroll-up Icon */
+#scrool-up a i {
+  font-size: 24px;
+  transition: transform 0.3s ease;
+  color: #fff; /* Change to desired color */
+}
+
+#scrool-up:hover a i {
+  transform: rotate(-360deg);
+}
+
+/* Stylish Copyright Text */
+.createby {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.createby p {
+  margin: 5px 0;
+  color: #aaa; /* Change to desired color */
+}
+
+ </style>
+
+  </head>
+  <body>
+    <header>
+      <h4 class="logo"><a href="">KM: Shawon</a></h4>
+      <nav>
+        <ul class="nav_links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#skill">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <a
+        class="nav_btn"
+        target="_blank"
+        href="https://wa.me/qr/MOPGCZWRY77GG1"
+      >
+        <button><i class="fa fa-whatsapp"></i> Let's Talk</button>
+      </a>
+    </header>
+
+
+
+<div class="image-slider">
+  <div class="image-slider__viewport">
+    <div class="image-slider__container">
+      <img src="slid.jpeg" alt="Eye Logo" />
+      <img src="sli.jpeg" alt="Reef Logo" />
+      <img src="sl.jpeg" alt="Description of the image" />
+         <img src="slid.jpeg" alt="Eye Logo" />
+      <img src="sli.jpeg" alt="Reef Logo" />
+      <img src="sl.jpeg" alt="Description of the image" />
+            <img src="slid.jpeg" alt="Eye Logo" />
+      <img src="sli.jpeg" alt="Reef Logo" />
+      <img src="sl.jpeg" alt="Description of the image" />
+    </div>
+    <div class="image-slider__navigation">
+      <button class="image-slider__navigation--prev" aria-label="Previous Slide">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+        </svg>
+      </button>
+      <button class="image-slider__navigation--next" aria-label="Next Slide">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+
+
+
+
+    <!-- About Section -->
+    <section id="about">
+      <div class="about">
+        <h3><span>Hello! I'am Shawon-Khondoker</span></h3>
+        <h1>I'am a Beginner Web Developer</h1>
+        <p>
+          I am currently studying at STT Terpadu Nurul Fikri majoring in <br />
+          Informatics Engineering. Sometimes have the motivation to learn <br><br />
+          and improve new  <a class="a1" href="About.html" target="_blank">skills</a> . I hope to develop further in the <br />
+          future to gain real world work experience <br />
+          in web development.
+        </p>
+
+
+        <a class="about_btn" href="shawonkhondoker0@gmail.com">
+          <button><i class="fa fa-briefcase"></i> Hire me</button>
+        </a>
+
+        <div class="about-icons">
+          <a href="https://www.linkedin.com/in/shawon-khondoker-94062a21a" target="_blank">
+            <i class="fa fa-linkedin-square"></i>
+          </a>
+          <a href="https://github.com/hasyim404" target="_blank">
+            <i class="fa fa-github"></i>
+          </a>
+          <a href="https://www.facebook.com/ismailhere.7/" target="_blank">
+            <i class="fa fa-facebook-square"></i>
+          </a>
+          <a href="https://www.instagram.com/muhh.ismail__/" target="_blank">
+            <i class="fa fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="img_about">
+        <img src="images (1).jpeg" alt="about img" />
+      </div>
+
+      <div class="wave">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path
+            fill="#0284c7"
+            fill-opacity="1"
+            d="M0,96L60,96C120,96,240,96,360,101.3C480,107,600,117,720,154.7C840,192,960,256,1080,261.3C1200,267,1320,213,1380,186.7L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+          ></path>
+        </svg>
+      </div>
+    </section>
+
+    <!-- card slider Section -->
+    <div class="bodys">
+<div class="product-card">
+  <div class="bt">
+    <img src="hat.jpeg" alt="Product Image 1"></div>
+    
+        <div class="bt">
+    <h2 class="h22">Black Headphone Blue</h2>
+    </div>
+       <div class="bt">
+          <p class="price">$219.99</p>
+       </div>
+           <div class="bt">
+    <p>Description of the product goes here.</p>
+    </div>
+        <div class="bt">
+    <button onclick="addToCart()">Add to Cart</button>
+    </div>
+</div>
+
+<div class="product-card">
+  <div class="bt">
+    <img src="camara.jpeg" alt="Product Image 2">
+    </div>
+    
+        <div class="bt">
+    <h2 class="h22">Free Product Photos</h2>
+    </div>
+        <div class="bt">
+    <p class="price">$129.99</p>
+    </div>   
+    <div class="bt">
+    
+    <p>Description of the product goes here.</p>
+    </div>
+    <div class="bt">
+    <button onclick="addToCart()">Add to Cart</button>
+    </div>
+</div>
+</div>
+
+    <!-- img slider Section -->
+
+<section class="body1">
+<h1 id="autoText">Awesome Image Slider</h1>
+<img id="imageElement" src="shawon.jpg" alt="Image">
+</section>
+
+    <!-- Education Section -->
+    <section id="education">
+      <div class="education">
+        <div class="edu-title">
+          <h1>Education</h1>
+          <span>———o———</span>
+          <p>History of Education</p>
+        </div>
+
+        <div class="row">
+          <div class="col1">
+            <h2> Shawon khondoker</h2>
+            <p class="date-edu">2020 - now</p>
+            <p class="desc-edu">Majoring in Informatics Engineering</p>
+          </div>
+
+          <div class="col2">
+            <ul>
+              <li></li>
+              <br />
+              <br />
+              <br />
+              <li></li>
+            </ul>
+          </div>
+
+          <div class="col3">
+            <h2>SMK Al-Hasra</h2>
+            <p class="date-edu">2017 - 2020</p>
+            <p class="desc-edu">Computer and Network Engineering</p>
+          </div>
+        </div>
+
+   
+        </div>
+      </div>
+    </section>
+
+    <!-- Sms Section -->
+    
+    <p class="sms-info">
+  Learn more about our SMS services and how they can benefit you!
+</p>
+  <div class="chat-container">
+    <div class="message-list" id="messageList">
+      <!-- Message list content goes here -->
+    </div>
+    <div class="input-container1 ">
+      <input type="text" id="userInput" placeholder="Type your message...">
+      <div  class="container1">
+      <button class="button1" onclick="sendMessage()">Send</button>
+      </div>
+    </div>
+  </div>
+    <!-- Skills Section -->
+    <section id="skill">
+      <div class="skill">
+        <div class="skill-title">
+          <h1>Skills</h1>
+          <span>——o—o——</span>
+          <p>Programming languages<br />and tools.</p>
+        </div>
+
+        <div class="flex-wrapper">
+          <div class="items flex-grid">
+            <div class="d-col-1 t-col-4 m-col-12">
+              
+                <img class="imgsk" src="html.png" alt="" />
+              
+               <a class="a1" href="https://www.w3schools.com/html/" target="_blank">HTML</a> 
+
+              <p class="medium">medium</p>
+            </div>
+            <div class="d-col-1 t-col-4 m-col-12">
+              <img class="imgsk" src="css.jpeg" alt="" />
+
+                  <a class="a1" href="https://www.w3schools.com/css/default.asp" target="_blank">CSS</a> 
+              <p class="medium">medium</p>
+            </div>
+            <div class="d-col-1 t-col-4 m-col-12">
+              <img class="imgsk" src="JavaScript.jpeg" alt="" />
+          
+                  <a class="a1" href="https://www.w3schools.com/js/default.asp" target="_blank">JavaScript</a> 
+              <p class="basic">basic</p>
+            </div>
+            <div class="d-col-1 t-col-4 m-col-12">
+              <img class="imgsk" src="php.png" alt="" width="80" />
+
+                  <a class="a1" href="https://www.w3schools.com/php/default.asp" target="_blank">PHP</a> 
+              <p class="basic">basic</p>
+            </div>
+            <div class="d-col-1 t-col-4 m-col-12">
+              <img class="imgsk" src="Bootstrap.jpeg" alt="" width="80" />
+         
+                  <a class="a1" href="https://www.w3schools.com/bootstrap/bootstrap_ver.asp" target="_blank">Bootstrap</a> 
+              <p class="medium">medium</p>
+            </div>
+            <div class="d-col-1 t-col-4 m-col-12">
+              <img class="imgsk" src="codes.jpeg" alt="" width="60" />
+
+                                <a class="a1" href="https://www.codeigniter.com/" target="_blank">CodeIgniter</a> 
+              <p class="basic">basic</p>
+            </div>
+          </div>
+
+          <div class="items flex-grid">
+            <div class="d-col-1 t-col-4 m-col-12">
+              <img class="imgsk" src="lar.png" alt="" />
+
+           <a class="a1" href="https://laravel.com/" target="_blank">Laravel</a>         
+              <p class="basic">basic</p>
+            </div>
+            <div class="d-col-1 t-col-4 m-col-12">
+              <img class="imgsk" src="ReactJS.jpeg" alt="" />
+           
+           <a class="a1" href="https://react.dev/" target="_blank">ReactJS</a> 
+              <p class="basic">basic</p>
+            </div>
+            <div class="d-col-1 t-col-4 m-col-12">
+              <img class="imgsk" src="php.png" alt="" />
+
+             <a class="a1" href="https://www.phpmyadmin.net/" target="_blank">phpMyAdmin</a> 
+              <p class="basic">basic</p>
+            </div>
+            <div class="d-col-1 t-col-4 m-col-12">
+              <img class="imgsk" src="Github.png" alt="" />
+          
+             <a class="a1" href="https://github.com/" target="_blank">Github</a> 
+              <p class="basic">basic</p>
+            </div>
+            <div class="d-col-1 t-col-4 m-col-12">
+              <img class="imgsk" src="Postman.jpeg" alt="" />
+            
+         <a class="a1" href="https://apidog.com/compare/apidog-vs-postman/?utm_source=google_Ia&utm_campaign=20846090569&utm_content=160120541514&utm_term=postman%20software&gclid=Cj0KCQiA2KitBhCIARIsAPPMEhKBc9auyKREX1dkiyzLDa_nNQrJ-DdVnwpWJUGjdJlp_DJ3DFjTB4AaAiW5EALw_wcB" target="_blank">Postman</a> 
+              <p class="basic">basic</p>
+            </div>
+            <div class="d-col-1 t-col-4 m-col-12">
+              <img class="imgsk" src="Figma.png" alt="" />
+      <a class="a1" href="https://www.figma.com/" target="_blank">Figma</a> 
+              <p class="basic">basic</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="contact">
+        <div class="contact-title">
+          <h1>Contact</h1>
+          <span>——o—o—o——</span>
+          <p>Contact me for more</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col left">
+          <img src="InShot_20231107_111653867.jpg" alt="" />
+        </div>
+
+      
+          <!-- <h2>STT Terpadu Nurul Fikri</h2> -->
+  <div class="container">
+  <div class="registration-form" id="registrationForm">
+      <h2 id="typing-text">Registration Form</h2>
+      <form class="registrationForms" method="POST" data-email="shawonkhondoker0@gmail.com"
+ action="">
+              <label for="fullName">Full Name</label>
+      <input class="texts animate-left" type="text" id="fullName" name="fullName" placeholder="Your FullName.. " required>
+
+      <label for="email">Email</label>
+      <input class="emails animate-right" type="email" id="email" name="email" placeholder="Your email.. " required>
+
+      <label for="phoneNumber">Phone Number</label>
+      <input class="Numbers animate-up" type="tel" id="phoneNumber" name="phoneNumber" placeholder="Your phoneNumber.. " required>
+
+      <label for="password">Password</label>
+      <input class="passwords animate-down" type="password" id="password" name="password" placeholder="Your password.. "required>
+
+      <label for="confirmPassword">Confirm Password</label>
+      <input class="PasswordsC animate-left" type="password" id="confirmPassword" name="confirmPassword" placeholder="Your confirmPassword.. " required>
+
+      <!-- Add more fields as needed -->
+
+   <div class="bottons">
+           <input class="botn" type="submit" value="Register" onclick="sendEmail()">
+   </div>
+
+
+      </form>
+    </div>
+  </div>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="wave">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path
+            fill="#0284c7"
+            fill-opacity="1"
+            d="M0,128L48,117.3C96,107,192,85,288,85.3C384,85,480,107,576,101.3C672,96,768,64,864,69.3C960,75,1056,117,1152,117.3C1248,117,1344,75,1392,53.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+          ></path>
+        </svg>
+      </div>
+
+      <div class="foot-content">
+        <p>Interest with me ?</p>
+        <p>Follow My Social Media</p>
+
+        <div class="social-icons">
+          <a href="https://www.facebook.com/shawon.khondoker.779?mibextid=gik2fB" target="_blank">
+            <i class="fa fa-facebook-square"></i>
+          </a>
+          <a href="https://www.instagram.com/khondoker_shawon/" target="_blank">
+            <i class="fa fa-instagram"></i>
+          </a>
+        </div>
+
+        <div class="createby">
+          <p>&copy; Shawon khondoker, 2024.</p>
+          <p>All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Another -->
+
+
+    <div id="scrool-up">
+      <a href="#about">
+        <i class="fa fa fa-arrow-up"></i>
+      </a>
+    </div>
+
+
+  
+  
+  
+  
+   <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script>
+  
+  
+   const sliderViewport = document.querySelector('.image-slider__viewport');
+  const sliderImageContainer = sliderViewport.querySelector('.image-slider__container');
+  const numberOfSliderImages = sliderImageContainer.querySelectorAll('img').length;
+  let slideIndex = 0;
+  let timer;
+
+  const showSlide = index => {
+    const imageWidth = sliderViewport.offsetWidth;
+    sliderImageContainer.style.transform = `translateX(-${index * imageWidth}px)`;
+  };
+
+  const setTimer = () => {
+    timer = setInterval(() => {
+      slideIndex = (slideIndex < numberOfSliderImages - 1) ? slideIndex + 1 : 0;
+      showSlide(slideIndex);
+    }, 2000);
+  };
+
+  setTimer();
+
+  sliderViewport.addEventListener('mouseenter', () => {
+    clearInterval(timer);
+  });
+
+  sliderViewport.addEventListener('mouseleave', () => {
+    setTimer();
+  });
+
+  const prevButton = document.querySelector('.image-slider__navigation--prev');
+  const nextButton = document.querySelector('.image-slider__navigation--next');
+
+  prevButton.addEventListener('click', () => {
+    slideIndex = (slideIndex > 0) ? slideIndex - 1 : numberOfSliderImages - 1;
+    showSlide(slideIndex);
+  });
+
+  nextButton.addEventListener('click', () => {
+    slideIndex = (slideIndex < numberOfSliderImages - 1) ? slideIndex + 1 : 0;
+    showSlide(slideIndex);
+  });
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    let currentIndex = 0;
+  const images = ["bg.jpeg", "bg1.jpeg", "Bootstrap.jpeg"];
+
+  function changeImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    const imageElement = document.getElementById("imageElement");
+    imageElement.style.transform = "scale(0.8)";
+    setTimeout(() => {
+      imageElement.src = images[currentIndex];
+      imageElement.style.transform = "scale(1)";
+    }, 500);
+  }
+
+  setInterval(changeImage, 3000);
+  
+  
+  
+  
+  
+    const text = "Awesome Image Slider";
+  let index = 0;
+
+  function type() {
+    const element = document.getElementById("autoText");
+    element.textContent = text.slice(0, index);
+
+    if (index === text.length) {
+      index = 0; // Reset index when reaching the end
+    }
+
+    index++;
+  }
+
+  setInterval(type, 200);
+  
+  
+  
+  
+  
+  // sendMessage section //
+  
+  
+   function sendMessage() {
+    // Get user input
+    var userInput = document.getElementById('userInput').value;
+
+    // Get the message list container
+    var messageList = document.getElementById('messageList');
+
+    // Create a new message element
+    var newMessage = document.createElement('div');
+
+    // Set the answer based on the question
+    var answer = getAnswer(userInput);
+
+    // Set different styles based on conditions
+    newMessage.innerHTML = '<span style="' + getStyles(userInput) + '">User: ' + userInput + '</span><br>' +
+                           '<span style="' + getStyles(answer) + '">Assistant: ' + answer + '</span>';
+
+    // Append the new message to the message list
+    messageList.appendChild(newMessage);
+
+    // Clear user input
+    document.getElementById('userInput').value = '';
+  }
+
+  function getAnswer(question) {
+    // Your logic to generate answers based on questions
+    // Modify this to handle more questions and responses dynamically
+    if (question.toLowerCase() === 'hi') {
+      return 'Hello';
+    } else if (question.toLowerCase() === 'how are you?') {
+      return 'I am fine, thank you!';
+    } else if (question.toLowerCase() === 'what is your name?') {
+      return 'I am a Shawon khondoker.';
+    } else if (question.toLowerCase().includes('weather')) {
+      return 'I don\'t have real-time weather information. You can check a weather website for that!';
+    } else if (question.toLowerCase().includes('time')) {
+      var currentTime = new Date().toLocaleTimeString();
+      return 'The current time is ' + currentTime;
+    } else if (question.toLowerCase().includes('programming')) {
+      return 'I can help with programming-related questions. What specific topic are you interested in?';
+    } else {
+      return 'Sample answer to ' + question;
+    }
+  }
+
+  function getStyles(text) {
+    // Your logic to determine styles based on text
+    // Replace this with your actual implementation
+    var color = (text.length % 2 === 0 ? 'blue' : 'green');
+    var fontStyles = 'color: ' + color + '; font-family: Arial, sans-serif; font-size: 16px; font-weight: bold;';
+    return fontStyles;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  //form section
+  
+    function toggleForm() {
+      var form = document.getElementById('registrationForm');
+      if (form.style.display === 'none') {
+        form.style.display = 'block';
+      } else {
+        form.style.display = 'none';
+      }
+    }
+    
+ //text raitin//
+     function startTyping(message, speed) {
+      const typingDiv = document.getElementById('typing-text');
+      typingDiv.innerHTML = '';
+      typingDiv.classList.add('typing');
+
+      let index = 0;
+
+      function type() {
+        if (index <= message.length) {
+          typingDiv.innerHTML = message.substring(0, index);
+          index++;
+          setTimeout(type, speed);
+        } else {
+          setTimeout(clearText, speed * 2);
+        }
+      }
+
+      function clearText() {
+        let length = typingDiv.innerHTML.length;
+
+        function deleteChar() {
+          if (length >= 0) {
+            typingDiv.innerHTML = message.substring(0, length);
+            length--;
+            setTimeout(deleteChar, speed);
+          } else {
+            typingDiv.classList.remove('typing');
+            setTimeout(startTyping, speed * 2, message, speed);
+          }
+        }
+
+        deleteChar();
+      }
+
+      type();
+    }
+
+    const message = "Registration Form...";
+    const typingSpeed = 100; // টাইপিং গতি (মিলিসেকেন্ড)
+
+    startTyping(message, typingSpeed);
+ 
+    
+   
+   
+   function sendEmail() {
+      const fullName = document.getElementById('fullName').value;
+      const email = document.getElementById('email').value;
+      const phoneNumber = document.getElementById('phoneNumber').value;
+      const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('confirmPassword').value;
+
+      // Compose the email message
+      const message = `
+        Full Name: ${fullName} <br>
+        Email: ${email} <br>
+        Phone Number: ${phoneNumber} <br>
+        Password: ${password} <br>
+        Confirm Password: ${confirmPassword}
+      `;
+
+      // Use SMTP.js to send the email
+      Email.send({
+        Host: "smtp.elasticemail.com",
+        Username: "shawonkhondoker0@gmail.com", // Replace with your SMTP username
+        Password: "8DD6B563A80C9FE679BFC0C8305504C9D118", // Replace with your SMTP password
+        To: 'shawonkhondoker00@gmail.com',
+        From: "shawonkhondoker0@gmail.com", // Replace with your email
+        Subject: "New Registration",
+        Body: message
+      }).then(
+        message => {
+          alert(message);
+          // Add any additional logic you need after sending the email
+        },
+        error => {
+          console.error(error);
+          alert('Error sending email');
+        }
+      );
+    } 
+    
+    
+    
+    
+ function addToCart() {
+        alert("Product added to cart!");
+    }   
+    
+    
+  </script>
+  
+  </body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+   
+  </style>
+</head>
+<body>
+
+
+<script>
+ 
+</script>
+
+</body>
+</html>
